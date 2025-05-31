@@ -1,6 +1,8 @@
 #!/usr/bin/env Python3 
 
 import pygame
+from PIL import Image
+from helpers.load_image import Car
 
 pygame.init()
 
@@ -14,7 +16,7 @@ dt = 0
 
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
 
-
+pygame.display.set_caption("Cool Car Game")
 while running:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
@@ -40,3 +42,6 @@ while running:
   dt = clock.tick(60) / 1000
 pygame.quit()
 
+# display car image
+simple_car = Car()
+simple_car.display()
