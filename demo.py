@@ -22,7 +22,6 @@ while running:
     if event.type == pygame.QUIT:
       running = False
 
-
   screen.fill("black")
 
   pygame.draw.circle(screen, "red", player_pos, 40)
